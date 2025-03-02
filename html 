@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Betting App</title>
+  <link rel="stylesheet" href="style.css">
+  <!-- You can add libraries like Animate.css or Framer Motion for extra animations -->
+</head>
+<body>
+  <header>
+    <h1>Betting App</h1>
+    <nav>
+      <ul>
+        <li><a href="#fixtures">Fixtures</a></li>
+        <li><a href="#betting">Place Bet</a></li>
+        <li><a href="#deposit-withdrawal">Deposit/Withdrawal</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Fixtures Section -->
+  <section id="fixtures">
+    <h2>Fixtures</h2>
+    <div id="fixtures-list">
+      <div class="fixture">
+        <span>Team A vs Team B</span>
+        <span>Odds: 2.5</span>
+      </div>
+      <div class="fixture">
+        <span>Team C vs Team D</span>
+        <span>Odds: 1.8</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Betting Section -->
+  <section id="betting">
+    <h2>Place Your Bet</h2>
+    <form id="bet-form">
+      <label for="fixture">Fixture:</label>
+      <select id="fixture" name="fixture">
+        <option value="1">Team A vs Team B</option>
+        <option value="2">Team C vs Team D</option>
+      </select>
+      <label for="stake">Stake Amount:</label>
+      <input type="number" id="stake" name="stake" min="1" required>
+      <button type="submit">Place Bet</button>
+    </form>
+    <div id="bet-result"></div>
+  </section>
+
+  <!-- Deposit & Withdrawal Section -->
+  <section id="deposit-withdrawal">
+    <h2>Deposit & Withdrawal</h2>
+    <div class="transaction-container">
+      <form id="deposit-form">
+        <h3>Deposit</h3>
+        <label for="deposit-amount">Amount:</label>
+        <input type="number" id="deposit-amount" name="deposit-amount" min="1" required>
+        <button type="submit">Deposit</button>
+      </form>
+      <form id="withdraw-form">
+        <h3>Withdrawal</h3>
+        <label for="withdraw-amount">Amount:</label>
+        <input type="number" id="withdraw-amount" name="withdraw-amount" min="1" required>
+        <button type="submit">Withdraw</button>
+      </form>
+    </div>
+    <div id="transaction-result"></div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact">
+    <h2>Contact / Feedback</h2>
+    <!-- This form uses Formspree. Configure your Formspree endpoint so that submissions are sent to fcm82643@gmail.com -->
+    <form id="contact-form" action="https://formspree.io/f/your-endpoint-here" method="POST">
+      <input type="hidden" name="_subject" value="Betting App Contact">
+      <label for="email">Your Email:</label>
+      <input type="email" id="email" name="email" required>
+      <label for="message">Message:</label>
+      <textarea id="message" name="message" rows="4" required></textarea>
+      <button type="submit">Send</button>
+    </form>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Betting App. All email notifications are configured to be sent to fcm82643@gmail.com.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
